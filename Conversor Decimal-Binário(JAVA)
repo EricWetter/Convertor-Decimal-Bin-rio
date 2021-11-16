@@ -1,0 +1,28 @@
+package convertebinario;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+
+public class ConverteBinario {
+
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n, i;
+        System.out.println("Digite um número: ");
+        n = input.nextInt();
+        ArrayList vetor = new ArrayList();
+        while ((n/2) != 0) {
+            vetor.add(n%2);
+            n /=2;
+        }
+        vetor.add(n%2);
+        Collections.reverse(vetor);
+        for (i = 0; i<vetor.size(); i++) {
+            System.out.print(vetor.get(i));
+        }
+        System.out.println();
+    }
+}
